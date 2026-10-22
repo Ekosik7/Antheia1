@@ -1,0 +1,13 @@
+flowchart LR
+    user[Shopper / user]
+    admin[Authorized catalog administrator - if enabled]
+    system[ANTHEIA personal styling system]
+    catalog[Permitted product feeds / catalog snapshots]
+    retailer[External retailer website and checkout]
+    user -->|Style DNA, closet, occasion, budget| system
+    user -.->|Optional consented photo| system
+    system -->|Outfits, explanations, comparisons| user
+    admin -->|Approved catalog management| system
+    catalog -->|Attributed products, variants and prices| system
+    system -->|Recorded outbound product link| retailer
+    user -->|External purchase| retailer

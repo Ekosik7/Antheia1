@@ -1,0 +1,40 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Frontend
+node_modules/
+dist/
+build/
+coverage/
+# Go artifacts
+*.exe
+*.test
+*.out
+backend/bin/
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Logs, local database and private uploads
+*.log
+.tmp/
+tmp/
+uploads/
+private-data/
+postgres-data/
+# Local models and datasets
+ai-service/models/
+ai-service/datasets/
+# OS and editor settings
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Academic sources and diagram exports remain trackable.

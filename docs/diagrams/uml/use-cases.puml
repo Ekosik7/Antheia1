@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+actor "Shopper / visitor" as User
+actor "Registered shopper (if accounts enabled)" as Registered
+actor "Authorized catalog administrator" as Admin
+Registered --|> User
+rectangle ANTHEIA {
+  usecase "Manage Style DNA" as DNA
+  usecase "Manage My Closet" as Closet
+  usecase "Add Item" as Add
+  usecase "Ask AI Stylist" as Stylist
+  usecase "Set Occasion / Budget" as Constraints
+  usecase "Generate Outfit" as Generate
+  usecase "Optional Photo Upload" as Photo
+  usecase "Review / Correct Palette" as Palette
+  usecase "Delete Photo / Manage Consent" as Privacy
+  usecase "My Shop / Compare Offers" as Shop
+  usecase "Save / Rate Recommendation" as Feedback
+  usecase "Manage Approved Catalog" as Catalog
+}
+User -- DNA
+User -- Closet
+User -- Add
+User -- Stylist
+User -- Constraints
+User -- Generate
+User -- Photo
+User -- Palette
+User -- Privacy
+User -- Shop
+Registered -- Feedback
+Admin -- Catalog
+note bottom of Photo
+  Requires affirmative consent.
+  Manual journey remains available.
+end note
+@enduml

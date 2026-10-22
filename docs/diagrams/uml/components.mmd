@@ -1,0 +1,30 @@
+flowchart TB
+    client[React Frontend]
+    subgraph goBackend[Go Backend - single application service]
+        api[API and request validation]
+        profile[Style DNA, guest/profile and consent]
+        closet[My Closet and Add Item]
+        catalog[Catalog adapters and retrieval]
+        engine[Recommendation Engine: composition, scoring and ranking]
+        validation[Hard constraints, subtotal and explanations]
+        api --> profile
+        api --> closet
+        api --> catalog
+        api --> engine
+        profile --> engine
+        closet --> engine
+        catalog --> engine
+        engine --> validation
+    end
+    db[(PostgreSQL)]
+    python[Python AI Service - optional quality and palette estimation]
+    sources[Permitted product / catalog data]
+    client -->|Application requests| api
+    api -->|Validated responses| client
+    profile --> db
+    closet --> db
+    catalog --> db
+    sources --> catalog
+    api -.->|Consented image processing| python
+    python -.->|Tentative colors and uncertainty| api
+    validation --> api
