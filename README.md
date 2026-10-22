@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ANTHEIA
 
 An intelligent personal styling and fashion recommendation system.
@@ -78,3 +79,7 @@ Not yet implemented. There are no dependency manifests, entrypoints, migrations,
 | Supervisor | [To be supplied] |
 
 YouTrack project: [URL to be supplied]. No tracker tasks, authorship history or supervisor approvals are claimed. [Suggested future commit plan](docs/project-management/suggested-commits.md).
+=======
+# Antheia
+An intelligent recommendation system for personalized user styling. The system analyzes uploaded images, user preferences, and personal parameters, then applies Computer Vision and Machine Learning methods to suggest suitable clothing, styles, and outfit combinations. The project is implemented as a web application with a user-friendly interface.
+>>>>>>> 1c2cf040dd7fd73d48d16c55116792f9557526f1
